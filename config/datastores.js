@@ -50,8 +50,17 @@ module.exports.datastores = {
     ***************************************************************************/
     // adapter: 'sails-mysql',
     // url: 'mysql://user:password@host:port/database',
+    adapter: 'sails-postgresql',
+    url: process.env.DATABASE_URL,
+    ssl: false
 
   },
+
+  heroku_posgres: {
+    adapter: 'sails-postgresql',
+    url: process.env.DATABASE_URL,
+    ssl: false
+  }
 
 
 };
